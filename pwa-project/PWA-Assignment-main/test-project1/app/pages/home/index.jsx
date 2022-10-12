@@ -46,6 +46,19 @@ import {
  * The page renders SEO metadata and a few promotion
  * categories and products, data is from local file.
  */
+
+ const MyHeader = ({name}) => {
+    return (
+        <Box>
+            <h1>Hello,{name}!</h1>
+            <Alert padding="10" status="success">
+                <AlertIcon />
+                Chakra UI components unlocked!
+            </Alert>
+        </Box>
+    )
+}
+
 const Home = ({productSearchResult, isLoading}) => {
     const intl = useIntl()
 
@@ -56,6 +69,9 @@ const Home = ({productSearchResult, isLoading}) => {
                 description="Commerce Cloud Retail React App"
                 keywords="Commerce Cloud, Retail React App, React Storefront"
             />
+
+            <h1>Hello PWA developer</h1>
+            <MyHeader name="Sushant" />
 
             <Hero
                 title={intl.formatMessage({
